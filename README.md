@@ -76,6 +76,13 @@ Este projeto demonstra a utilização de Spring Boot com versionamento de API de
 
 - V2 → CNPJ String alfanumérico
 
+🚀 Funcionamento no visual com Swagger
+  
+    - http://localhost:8080/swagger-ui/index.html#/
+
+![Swagger funcional](image/swagger.png)
+
+
 
 
 
