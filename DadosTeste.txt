@@ -1,0 +1,30 @@
+
+ - Link local
+    (GET / POST)
+    - http://localhost:8080/api/v1/pagamentos
+    (GET / POST)
+    - http://localhost:8080/api/v2/pagamentos
+
+ - Content-Type / application/json
+
+ - Body das requisições:
+
+    {
+      "nome": "Cliente Teste",
+      "cnpj": 12345678000199,
+      "telefone": 219999999,
+      "valorPago": 150.75
+    }
+
+    {
+      "nome": "Cliente V2 Alfa",
+      "cnpj": "12AB5678000199",
+      "telefone": 219999999,
+      "valorPago": 300.00
+    }
+
+ - Link do browser Swagger: (exemplo)
+    - http://localhost:8080/swagger-ui/index.html#/controller/listarV1
+
+ - As validações são minímas, para simular o mais breve de um estado de api, então a intenção foi verificar uma chegada
+ CNPJ numerico ou String por vias diferentes em ambiente simulado sem BD!
