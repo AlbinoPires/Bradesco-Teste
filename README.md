@@ -32,5 +32,52 @@ Este projeto demonstra a utilização de Spring Boot com versionamento de API de
     - No interior do projeto deixarei um arquivo com os dados testados, livre para qualquer teste pessoal sem finalidade lucrativa. 
 
 
+🚀 Tecnologias utilizadas
+
+- Java 17
+
+- Spring Boot 3.5.3
+
+- Spring Web (REST API)
+
+- Spring Validation (Jakarta Bean Validation)
+
+- Springdoc OpenAPI (Swagger UI)
+
+- Versão: 2.8.15
+
+- Maven
+
+- Tomcat embarcado
+
+- Arquitetura com Interface + @Component + @Qualifier
+
+- Versionamento de API (V1 / V2)
+
+- IDE: IntelliJ IDEA 2024.2.6 (Ultimate Edition)
+
+🏗️ Arquitetura do projeto
+
+- Controller injeta serviços via interface (IService)
+
+- Implementações separadas por versão:
+
+- @Component("servicoV1")
+
+- @Component("servicoV2")
+
+- Seleção explícita de implementação via @Qualifier
+
+- Persistência em memória (sem banco de dados)
+
+- DTOs distintos por versão:
+
+- V1 → CNPJ numérico
+
+- V2 → CNPJ String alfanumérico
+
+
+
+
 
 
