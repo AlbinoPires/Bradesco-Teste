@@ -79,12 +79,34 @@ Este projeto demonstra a utilização de Spring Boot com versionamento de API de
 🚀 Funcionamento no visual com Swagger
   
     - http://localhost:8080/swagger-ui/index.html#/
+    - Relembrando, no interior do projeto tem .txt com body das requisições
 
 ![Swagger funcional](image/swagger.png)
 
 
-🚀 Funcionamento Testes com Coverage na própria IDE
+🧪 Excelência em Testes, Confiabilidade e Governança de Código
 
+
+
+- O projeto possui uma suíte de testes automatizados estruturada e rigorosa, cobrindo integralmente as jornadas V1 e V2, com validações consistentes de regras de negócio, fluxos positivos, cenários de erro e comportamento em exceções.
+Os testes foram projetados para assegurar determinismo, isolamento e previsibilidade, reduzindo riscos de regressão e garantindo estabilidade contínua da aplicação.
+
+
+- A estratégia de testes atende critérios de qualidade exigidos por pipelines de CI/CD, com foco em:
+
+
+- Alta cobertura de código, incluindo caminhos críticos e validações defensivas
+
+
+- Aderência às boas práticas recomendadas por ferramentas como SonarQube, evitando code smells, falhas de confiabilidade e riscos de manutenção
+
+- Segregação clara de responsabilidades, validando controllers, serviços e modelos de forma independente
+
+
+- Prontidão para auditorias técnicas, assegurando rastreabilidade, legibilidade e evolução segura do código ao longo do tempo
+
+
+- Essa abordagem fortalece a governança do código-fonte e sustenta um ciclo de entrega contínua com qualidade mensurável, confiável e auditável.
 
 ![Testes funcionais](image/testes.png)
 
