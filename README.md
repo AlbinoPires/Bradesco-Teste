@@ -1,5 +1,8 @@
 
-# Simulação de Versionamento API
+
+![Coverage](https://codecov.io/gh/AlbinoPires/Bradesco-Teste/branch/master/graph/badge.svg)
+
+# Simulação de Versionamento API - 
 
 Este projeto demonstra a utilização de Spring Boot com versionamento de API dentro do mesmo controller, aplicando boas práticas de arquitetura e técnicas avançadas de injeção de dependência.
 
