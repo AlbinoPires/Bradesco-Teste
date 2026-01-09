@@ -11,12 +11,12 @@ import java.util.List;
 
 @Component("servicoV2")
 public class ServicoFinanceiroV2
-        implements IService<ClienteV2DTO, ServicoFinanceiroV2.ResultadoPagamentoV1, ServicoFinanceiroV2.PagamentoV1> {
+        implements IService<ClienteV2DTO, ServicoFinanceiroV2.ResultadoPagamentoV2, ServicoFinanceiroV2.PagamentoV2> {
 
-    private final List<PagamentoV1> pagamentos = new ArrayList<>();
+    private final List<PagamentoV2> pagamentos = new ArrayList<>();
 
     @Override
-    public ResultadoPagamentoV1 pagar(ClienteV2DTO dto) {
+    public ResultadoPagamentoV2 pagar(ClienteV2DTO dto) {
 
         if (dto == null) {
             throw new IllegalArgumentException("Body não pode ser nulo.");
@@ -48,7 +48,7 @@ public class ServicoFinanceiroV2
 
         String cnpjFormatado = cnpj;
 
-        PagamentoV1 pagamento = new PagamentoV1(
+        PagamentoV2 pagamento = new PagamentoV2(
                 dto.getNome().trim(),
                 cnpjFormatado,
                 dto.getTelefone(),
@@ -58,7 +58,7 @@ public class ServicoFinanceiroV2
 
         pagamentos.add(pagamento);
 
-        return new ResultadoPagamentoV1(
+        return new ResultadoPagamentoV2(
                 "Pagamento V2 recebido com sucesso",
                 cnpjFormatado,
                 dto.getValorPago()
@@ -66,18 +66,18 @@ public class ServicoFinanceiroV2
     }
 
     @Override
-    public List<PagamentoV1> listar() {
+    public List<PagamentoV2> listar() {
         return Collections.unmodifiableList(pagamentos);
     }
 
-    public static class PagamentoV1 {
+    public static class PagamentoV2 {
         private final String nome;
         private final String cnpjFormatado;
         private final int telefone;
         private final BigDecimal valorPago;
         private final LocalDateTime dataHora;
 
-        public PagamentoV1(String nome, String cnpjFormatado, int telefone, BigDecimal valorPago, LocalDateTime dataHora) {
+        public PagamentoV2(String nome, String cnpjFormatado, int telefone, BigDecimal valorPago, LocalDateTime dataHora) {
             this.nome = nome;
             this.cnpjFormatado = cnpjFormatado;
             this.telefone = telefone;
@@ -92,12 +92,12 @@ public class ServicoFinanceiroV2
         public LocalDateTime getDataHora() { return dataHora; }
     }
 
-    public static class ResultadoPagamentoV1 {
+    public static class ResultadoPagamentoV2 {
         private final String mensagem;
         private final String cnpjFormatado;
         private final BigDecimal valorPago;
 
-        public ResultadoPagamentoV1(String mensagem, String cnpjFormatado, BigDecimal valorPago) {
+        public ResultadoPagamentoV2(String mensagem, String cnpjFormatado, BigDecimal valorPago) {
             this.mensagem = mensagem;
             this.cnpjFormatado = cnpjFormatado;
             this.valorPago = valorPago;
