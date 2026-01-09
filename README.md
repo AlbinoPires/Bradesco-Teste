@@ -130,9 +130,10 @@ O projeto possui pipeline de Integração Contínua (CI) configurado com GitHub 
 * Qualquer falha em testes unitários ou validações interrompe o pipeline, impedindo a propagação de código inconsistente para branches principais.
 Esse processo assegura qualidade contínua, prevenção de regressões e confiabilidade no versionamento, seguindo padrões adotados em ambientes corporativos e financeiros.
 
-![CI](https://github.com/AlbinoPires/Bradesco-Teste/actions/workflows/ci.yml/badge.svg)
 
-
+[![CI](https://github.com/AlbinoPires/Bradesco-Teste/actions/workflows/ci.yml/badge.svg)](
+https://github.com/AlbinoPires/Bradesco-Teste/actions/workflows/ci.yml
+)
 
 
 
