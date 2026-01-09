@@ -86,7 +86,7 @@ Este projeto demonstra a utilização de Spring Boot com versionamento de API de
 🚀 Funcionamento Testes com Coverage na própria IDE
 
 
-![Swagger funcional](image/testes.png)
+![Testes funcionais](image/testes.png)
 
 
 
