@@ -112,6 +112,24 @@ Os testes foram projetados para assegurar determinismo, isolamento e previsibili
 
 🚀 Em Teste:  Rodar pipeline...
 
+🔁 Integração Contínua (CI) e Qualidade
+
+O projeto possui pipeline de Integração Contínua (CI) configurado com GitHub Actions, garantindo a validação automática do código a cada alteração submetida ao repositório.
+
+* A pipeline executa as seguintes etapas:
+
+    Checkout do código-fonte
+
+    Configuração do ambiente Java (JDK 17)
+
+    Resolução e cache de dependências Maven
+
+    Execução automática da suíte de testes (mvn clean test)
+
+
+* Qualquer falha em testes unitários ou validações interrompe o pipeline, impedindo a propagação de código inconsistente para branches principais.
+Esse processo assegura qualidade contínua, prevenção de regressões e confiabilidade no versionamento, seguindo padrões adotados em ambientes corporativos e financeiros.
+
 ![CI](https://github.com/AlbinoPires/Bradesco-Teste/actions/workflows/ci.yml/badge.svg)
 
 
