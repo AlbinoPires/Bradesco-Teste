@@ -20,14 +20,14 @@ public class Controller {
 
     private final IService<ClienteV1DTO, ServicoFinanceiroV1.ResultadoPagamentoV1, ServicoFinanceiroV1.PagamentoV1> servicoV1;
 
-    private final IService<ClienteV2DTO, ServicoFinanceiroV2.ResultadoPagamentoV1, ServicoFinanceiroV2.PagamentoV1> servicoV2;
+    private final IService<ClienteV2DTO, ServicoFinanceiroV2.ResultadoPagamentoV2, ServicoFinanceiroV2.PagamentoV2> servicoV2;
 
     public Controller(
             @Qualifier("servicoV1")
             IService<ClienteV1DTO, ServicoFinanceiroV1.ResultadoPagamentoV1, ServicoFinanceiroV1.PagamentoV1> servicoV1,
 
             @Qualifier("servicoV2")
-            IService<ClienteV2DTO, ServicoFinanceiroV2.ResultadoPagamentoV1, ServicoFinanceiroV2.PagamentoV1> servicoV2
+            IService<ClienteV2DTO, ServicoFinanceiroV2.ResultadoPagamentoV2, ServicoFinanceiroV2.PagamentoV2> servicoV2
     ) {
         this.servicoV1 = servicoV1;
         this.servicoV2 = servicoV2;
@@ -55,7 +55,7 @@ public class Controller {
     }
 
     @GetMapping("/v2/pagamentos")
-    public ResponseEntity<List<ServicoFinanceiroV2.PagamentoV1>> listarV2() {
+    public ResponseEntity<List<ServicoFinanceiroV2.PagamentoV2>> listarV2() {
         return ResponseEntity.ok(servicoV2.listar());
     }
 }
