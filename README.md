@@ -110,7 +110,9 @@ Os testes foram projetados para assegurar determinismo, isolamento e previsibili
 
 ![Testes funcionais](image/testes.png)
 
+🚀 Em Teste:  Rodar pipeline...
 
+![CI](https://github.com/AlbinoPires/Bradesco-Teste/actions/workflows/ci.yml/badge.svg)
 
 
 
